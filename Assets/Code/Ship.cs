@@ -9,6 +9,12 @@ public class Ship : MonoBehaviour
     public GameObject projectilePrefab;
     public GameObject projectileSpawnPoint;
     public GameObject explosionPrefab;
+
+    /*
+    public GameObject thrustPrefab;
+    public GameObject thrustSpawnPoint;
+    */
+
     public float acceleration;
     public float maxSpeed;
     public int maxArmor;
@@ -18,10 +24,18 @@ public class Ship : MonoBehaviour
     [HideInInspector] public int currentArmor;
     protected bool canFire;
 
+    // public bool canGainHealth; // ----
+
+    [HideInInspector] ParticleSystem thrustParticles; // hidden in unity, 
+
     private void Awake()
     {
         currentArmor = maxArmor;
         canFire = true;
+
+        // canGainHealth = true; // ----
+
+        thrustParticles = GetComponentInChildren<ParticleSystem>();
     }
 
     IEnumerator FireRateBuffer()
@@ -35,6 +49,8 @@ public class Ship : MonoBehaviour
     public void Thrust()
     {
         myRigidbody2D.AddForce(transform.up * acceleration); // adds force to ship
+
+        thrustParticles.Emit(1);
     }
 
     private void Update()
@@ -55,28 +71,53 @@ public class Ship : MonoBehaviour
 
             projectile.GetComponent<Rigidbody2D>().AddForce(transform.up * projectileSpeed); //creates force on projectile
 
-            StartCoroutine(FireRateBuffer()); // waits for the delay before making new one
-
             Destroy(projectile, 4); // destroys after 4 seconds
+
+            StartCoroutine(FireRateBuffer()); // waits for the delay before making new one
         }
        
-    } 
+    }
 
-    public void TakeDamage(int damageToTake)
+    public virtual void TakeDamage(int damageToTake)
     {
         currentArmor = currentArmor - damageToTake;
+
+
         if (currentArmor <= 0)
         {
             Expload();
         }
+
+        
     }
 
     public void Expload()
     {
-        //Instantiate(Resources.Load("Explosion"), transform.position, transform.rotation);
-        Instantiate(explosionPrefab, transform.position, transform.rotation);
+        //Debug.Log("Step1");
+
+        if (GetComponent<PlayerShip>())
+        {
+            //Debug.Log("Step2");
+            GameManager.Instance.GameOver();
+        }
+
+        //Debug.Log("Step5");
+
+
+        ScreenShakeManager.Instance.ShakeScreen(); // calling class, find instance, instance only calls 1 this
+        
+
+        Instantiate(Resources.Load("Explosion"), transform.position, transform.rotation);  //Instantiate(explosionPrefab, transform.position, transform.rotation);
+
+
+        FindObjectOfType<EnemyShipSpawner>().CountEnemyShips();
 
         Destroy(gameObject);
+
+      
+
+
     }
+
 
 }

@@ -10,6 +10,7 @@ public class Projectile : MonoBehaviour
     public void SetFiringShip(GameObject firer)
     {
         firingShip = firer;
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision) // when to objects collide
@@ -19,6 +20,7 @@ public class Projectile : MonoBehaviour
         if (otherObject && collision.gameObject != firingShip) // if it is a ship  and not the ship that shot
         {
             otherObject.TakeDamage(damageToGive); // other object (Ship from L17) takes damage
+
             Destroy(gameObject); // destroy itself
         }
     }

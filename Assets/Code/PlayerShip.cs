@@ -6,6 +6,7 @@ public class PlayerShip : Ship
 {
 
 
+    // int armorToGain = 5; // ----
 
     void Start()
     {
@@ -47,4 +48,23 @@ public class PlayerShip : Ship
         HandleInput();
         FollowMouse();
     }
+
+    
+    public override void TakeDamage(int damageToTake)
+    {
+        base.TakeDamage(damageToTake);
+      
+        HUD.Instance.DisplayHealth(currentArmor, maxArmor);
+
+    }
+    
+    /*
+    public void HealthBoost()
+    {
+        currentArmor = maxArmor;
+
+        HUD.Instance.DisplayHealth(currentArmor, maxArmor);
+
+    }
+    */
 }
