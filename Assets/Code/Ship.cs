@@ -5,6 +5,8 @@ using UnityEngine;
 
 public class Ship : MonoBehaviour
 {
+    // IS THIS VISIBLE
+
     public Rigidbody2D myRigidbody2D;
     public GameObject projectilePrefab;
     public GameObject projectileSpawnPoint;
