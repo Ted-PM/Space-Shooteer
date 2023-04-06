@@ -11,18 +11,11 @@ public class BeeBox : MonoBehaviour
 
     public void TakeDamage(int damageToTake)
     {
-        Debug.Log("StepB");
-        Debug.Log(currentArmor);
 
         currentArmor = currentArmor - damageToTake;
 
-        Debug.Log("StepC");
-        Debug.Log(currentArmor);
-
         if (currentArmor <= 0)
         {
-            Debug.Log("StepD");
-            Debug.Log(currentArmor);
             Expload();
         }
 
@@ -31,20 +24,11 @@ public class BeeBox : MonoBehaviour
 
     public void Expload()
     {
-
-        Debug.Log("StepE");
-        Debug.Log(currentArmor);
-
         ScreenShakeManager.Instance.ShakeScreen(); // calling class, find instance, instance only calls 1 this
-
 
         Instantiate(Resources.Load("Explosion"), transform.position, transform.rotation);  //Instantiate(explosionPrefab, transform.position, transform.rotation);
 
         Destroy(gameObject);
-
-        Debug.Log("StepD");
-        Debug.Log(currentArmor);
-
 
     }
 
