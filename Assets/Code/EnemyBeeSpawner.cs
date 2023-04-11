@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShipSpawner : MonoBehaviour
+public class EnemyBeeSpawner : MonoBehaviour
 {
-    public List<EnemyShip> enemyShipPrefabs;
+    public List<EnemyBee> enemyBeePrefab;
 
     public Transform spawnPoint;
     public Transform spawnPivot;
 
     [HideInInspector] public int currentWave = 1;
-    [HideInInspector] public int startingNumberOfShips;
+    /*[HideInInspector] */public int startingNumberOfBees;
 
     /*
 
@@ -25,7 +25,7 @@ public class EnemyShipSpawner : MonoBehaviour
 
     private void Awake()
     {
-
+        SpawnEnemyBee();
 
     }
 
@@ -38,17 +38,21 @@ public class EnemyShipSpawner : MonoBehaviour
         Instantiate(enemyShip2, spawnPoint2.position, transform.rotation, null);  
     }*/
 
-    public void SpawnEnemyShip()
+    public void SpawnEnemyBee()
     {
-        int enemyShipsToSpawn = startingNumberOfShips + currentWave;
+        int enemyBeesToSpawn = startingNumberOfBees + currentWave;
 
-        for (int i = 0; i <enemyShipsToSpawn; i++)
+        
+
+        for (int i = 0; i <enemyBeesToSpawn; i++)
         {
-            int rand = Random.Range(0, enemyShipPrefabs.Count);
+            int rand = Random.Range(0, enemyBeePrefab.Count);
             float zRotation = Random.Range(0, 360);
 
             spawnPivot.eulerAngles = new Vector3(0, 0, zRotation);
-            Instantiate(enemyShipPrefabs[rand], spawnPoint.position, transform.rotation, null);
+            Instantiate(enemyBeePrefab[rand], spawnPoint.position, transform.rotation, null);
+
+            
         }
 
 
@@ -70,13 +74,13 @@ public class EnemyShipSpawner : MonoBehaviour
         }
         
     }*/
-    public void CountEnemyShips()
+    public void CountEnemyBees()
     {
-        int numberOfEnemyShips = FindObjectsOfType<EnemyShip>().Length;
+        int numberOfEnemyBees = FindObjectsOfType<EnemyBee>().Length;
 
-        print(numberOfEnemyShips);
+        print(numberOfEnemyBees);
 
-        if (numberOfEnemyShips == 1)
+        if (numberOfEnemyBees == 1)
         {
             currentWave++;
 
@@ -85,7 +89,7 @@ public class EnemyShipSpawner : MonoBehaviour
             HUD.Instance.DisplayWave(currentWave);
             
 
-            SpawnEnemyShip();
+            SpawnEnemyBee();
 
             if (currentWave > PlayerPrefs.GetInt("highestWave"))
             {

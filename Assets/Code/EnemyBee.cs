@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyShip : Ship
+public class EnemyBee : Animals
 {
     
     private Transform target; // transform is variable tag: size, position rotation
-    public bool canFireAtPlayer;
+    public bool canFireAtBirdPlayer;
 
     public float thrustRate;
     public bool quickThrust;
@@ -18,7 +18,7 @@ public class EnemyShip : Ship
 
     void Start()
     {
-        target = FindObjectOfType<PlayerShip>().transform; // finds PlayerShip, x y
+        target = FindObjectOfType<PlayerBird>().transform; // finds PlayerShip, x y
    
     }
 
@@ -26,9 +26,9 @@ public class EnemyShip : Ship
     {
             
 
-        if (collision.gameObject.GetComponent<PlayerShip>() && canFire)
+        if (collision.gameObject.GetComponent<PlayerBird>() && canFire)
         {  
-            collision.gameObject.GetComponent<PlayerShip>().TakeDamage(1);
+            collision.gameObject.GetComponent<PlayerBird>().TakeDamage(1);
             Expload();
             target.GetComponent<SpriteRenderer>().color = colorGreen;
         }
@@ -69,7 +69,7 @@ public class EnemyShip : Ship
         target.GetComponent<SpriteRenderer>().color = colorGreen;
 
 
-        if (canFireAtPlayer)
+        if (canFireAtBirdPlayer)
         {
             FireProjectile();
         }

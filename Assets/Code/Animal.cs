@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Ship : MonoBehaviour
+public class Animals : MonoBehaviour
 {
     // IS THIS VISIBLE
 
@@ -97,7 +97,7 @@ public class Ship : MonoBehaviour
     {
         //Debug.Log("Step1");
 
-        if (GetComponent<PlayerShip>())
+        if (GetComponent<PlayerBird>())
         {
             //Debug.Log("Step2");
             GameManager.Instance.GameOver();
@@ -112,7 +112,7 @@ public class Ship : MonoBehaviour
         Instantiate(Resources.Load("Explosion"), transform.position, transform.rotation);  //Instantiate(explosionPrefab, transform.position, transform.rotation);
 
 
-        FindObjectOfType<EnemyShipSpawner>().CountEnemyShips();
+        FindObjectOfType<EnemyBeeSpawner>().CountEnemyBees();
 
         Destroy(gameObject);
 

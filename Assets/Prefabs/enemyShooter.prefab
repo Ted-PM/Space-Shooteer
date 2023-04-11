@@ -180,7 +180,9 @@ MonoBehaviour:
   projectileSpeed: 300
   currentSpeed: 0
   currentArmor: 0
-  canFireAtPlayer: 1
+  canFireAtBirdPlayer: 1
+  thrustRate: 0
+  quickThrust: 0
 --- !u!1001 &3584842389555704564
 PrefabInstance:
   m_ObjectHideFlags: 0

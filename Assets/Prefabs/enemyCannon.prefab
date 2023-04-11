@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 7258220982078427657}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -6, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7258220982209818087}
@@ -142,14 +142,16 @@ MonoBehaviour:
   projectilePrefab: {fileID: 478160447511300551, guid: e85ab3a8cc049477fb63e0eb0c0b8143, type: 3}
   projectileSpawnPoint: {fileID: 7258220982209818084}
   explosionPrefab: {fileID: 8103687451313379488, guid: 779095f0c936444129b67932d04a963a, type: 3}
-  acceleration: 1
-  maxSpeed: 3
-  maxArmor: 3
-  fireRate: 3
+  acceleration: 2
+  maxSpeed: 0.7
+  maxArmor: 5
+  fireRate: 10000
   projectileSpeed: 200
   currentSpeed: 0
   currentArmor: 0
-  canFireAtPlayer: 1
+  canFireAtBirdPlayer: 1
+  thrustRate: 0
+  quickThrust: 0
 --- !u!1 &7258220982209818084
 GameObject:
   m_ObjectHideFlags: 0

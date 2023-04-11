@@ -30,6 +30,8 @@ public class BeeBox : MonoBehaviour
 
         Destroy(gameObject);
 
+        GameManager.Instance.GameOver();
+
     }
 
 
@@ -40,7 +42,7 @@ public class BeeBox : MonoBehaviour
 
         currentArmor = maxArmor;
 
-        Debug.Log("StepA");
+        
         Debug.Log(currentArmor);
     }
 
