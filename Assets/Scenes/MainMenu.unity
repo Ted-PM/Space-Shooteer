@@ -303,14 +303,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bd01e2b3b47c4507aa074c3635dec9c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyShipPrefabs:
-  - {fileID: 8104133191420936791, guid: 8dec6174077924c928e921c02f55bc07, type: 3}
-  - {fileID: 599619879066236710, guid: 87c65f42e6e414ccab7036f986745a1f, type: 3}
-  - {fileID: 7258220982078427671, guid: 9c2483abf742e4dcebd0813b32828c66, type: 3}
+  enemyBeePrefab: []
   spawnPoint: {fileID: 1145612343}
   spawnPivot: {fileID: 1647880443}
   currentWave: 1
-  startingNumberOfShips: 0
+  startingNumberOfBees: 0
 --- !u!1 &430753822
 GameObject:
   m_ObjectHideFlags: 0
@@ -992,8 +989,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65deaed3632bd4f72bfbb2f137a452ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  starPrefab: {fileID: 8062363594276352350, guid: 5421b752d9a0c4dcb97d315c852e741b, type: 3}
-  numberOfStars: 4500
+  flowerPrefabs:
+  - {fileID: 0}
+  numberOfFlowers: 0
   maxX: 1000
   maxY: 1000
   maxZ: 15
