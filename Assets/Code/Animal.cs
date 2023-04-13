@@ -11,6 +11,7 @@ public class Animals : MonoBehaviour
     public GameObject projectilePrefab;
     public GameObject projectileSpawnPoint;
     public GameObject explosionPrefab;
+    //public GameObject pointerPrefab;
 
     /*
     public GameObject thrustPrefab;
@@ -46,6 +47,8 @@ public class Animals : MonoBehaviour
         yield return new WaitForSeconds(fireRate); // waits before can fire again
         canFire = true; // can fire again
     }
+
+ 
 
 
     public void Thrust()

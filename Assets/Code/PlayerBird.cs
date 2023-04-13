@@ -5,12 +5,13 @@ using UnityEngine;
 public class PlayerBird : Animals
 {
 
+    private Transform target;
 
     // int armorToGain = 5; // ----
 
     void Start()
     {
-
+        target = FindObjectOfType<BeeBox>().transform;
     }
 
     public void HandleInput()
@@ -27,6 +28,7 @@ public class PlayerBird : Animals
 
         
     }
+
 
     public void FollowMouse()
     {
