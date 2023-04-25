@@ -29,7 +29,10 @@ public class Animals : MonoBehaviour
 
     // public bool canGainHealth; // ----
 
-    [HideInInspector] ParticleSystem thrustParticles; // hidden in unity, 
+    [HideInInspector] ParticleSystem pollenParticles; // hidden in unity,
+    public ParticleSystem pollenPrefab;
+
+
 
     private void Awake()
     {
@@ -38,7 +41,13 @@ public class Animals : MonoBehaviour
 
         // canGainHealth = true; // ----
 
-        thrustParticles = GetComponentInChildren<ParticleSystem>();
+        //Debug.Log("Step1");
+        //pollenParticles = GetComponentInChildren<ParticleSystem>();
+        pollenParticles = Instantiate(pollenPrefab, myRigidbody2D.transform.position, myRigidbody2D.transform.rotation);
+        pollenParticles.transform.parent = this.transform;
+
+
+
     }
 
     IEnumerator FireRateBuffer()
@@ -53,9 +62,12 @@ public class Animals : MonoBehaviour
 
     public void Thrust()
     {
+
+
         myRigidbody2D.AddForce(transform.up * acceleration); // adds force to ship
 
-        thrustParticles.Emit(1);
+        pollenParticles.Emit(1);
+
     }
 
     private void Update()
