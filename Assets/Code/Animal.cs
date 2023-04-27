@@ -154,7 +154,7 @@ public class Animals : MonoBehaviour
         ScreenShakeManager.Instance.ShakeScreen(); // calling class, find instance, instance only calls 1 this
         
 
-        Instantiate(Resources.Load("Explosion"), transform.position, transform.rotation);  //Instantiate(explosionPrefab, transform.position, transform.rotation);
+        Instantiate(Resources.Load("Bee Explosion"), transform.position, transform.rotation);  //Instantiate(explosionPrefab, transform.position, transform.rotation);
 
 
         FindObjectOfType<EnemyBeeSpawner>().CountEnemyBees();
