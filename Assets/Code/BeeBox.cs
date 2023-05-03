@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using DG.Tweening;
 
 public class BeeBox : MonoBehaviour
 {
@@ -8,6 +9,35 @@ public class BeeBox : MonoBehaviour
     [HideInInspector] public int currentArmor;
     public Rigidbody2D myRigidbody2D;
     public GameObject explosionPrefab;
+
+    //public AudioClip beeBuzzing;
+
+    public AudioSource beeBuzzing;
+
+
+    public float duration; // --
+    public float strength; // --
+    public int vibrato; // --
+    public float randomness; // --
+
+    public void ShakeBeeBox() // -- 
+    {
+
+        transform.DOShakePosition(duration, strength, vibrato, randomness, false, true); // shakes it's own object // --
+
+        // Instantiate(beeBuzzing);
+
+        beeBuzzing.Play();
+
+        //beeBuzzing.SetScheduledEndTime(AudioSettings.dspTime + (14.57f - 13.21f));
+
+
+        //Debug.Log(beeBuzzing);
+
+        //Instantiate(beeBuzzing);
+
+        //AudioSource.PlayClipAtPoint(beeBuzzing, new Vector3(1, 1, 1));
+    }
 
     public void TakeDamage(int damageToTake)
     {
@@ -42,7 +72,9 @@ public class BeeBox : MonoBehaviour
 
         currentArmor = maxArmor;
 
-        
+        //beeBuzzing = gameObject.GetComponent<AudioSource>();
+
+
         Debug.Log(currentArmor);
     }
 

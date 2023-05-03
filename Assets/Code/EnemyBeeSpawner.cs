@@ -12,6 +12,10 @@ public class EnemyBeeSpawner : MonoBehaviour
     [HideInInspector] public int currentWave = 1;
     /*[HideInInspector] */public int startingNumberOfBees;
 
+
+    public float spawnRate; // --
+    //protected bool canSpawnEnemies; // --
+
     /*
 
     public GameObject enemyShip1;
@@ -25,7 +29,9 @@ public class EnemyBeeSpawner : MonoBehaviour
 
     private void Awake()
     {
+        //canSpawnEnemies = true; // --
         SpawnEnemyBee();
+        
 
     }
 
@@ -38,21 +44,38 @@ public class EnemyBeeSpawner : MonoBehaviour
         Instantiate(enemyShip2, spawnPoint2.position, transform.rotation, null);  
     }*/
 
+    IEnumerator BeeSpawnBuffer() // --
+    {
+        FindObjectOfType<BeeBox>().ShakeBeeBox(); // --
+        //canSpawnEnemies = false; // disables projectiles
+        yield return new WaitForSeconds(spawnRate); // waits before can fire again
+        //canSpawnEnemies = true; // can fire again
+        SpawnEnemyBee();
+
+    }
+
     public void SpawnEnemyBee()
     {
         int enemyBeesToSpawn = startingNumberOfBees + currentWave;
 
+        //Debug.Log("Step 4");
+
         
+
+        //Debug.Log("Step 5");
 
         for (int i = 0; i <enemyBeesToSpawn; i++)
         {
+            //Debug.Log("Step 6");
             int rand = Random.Range(0, enemyBeePrefab.Count);
             float zRotation = Random.Range(0, 360);
 
             spawnPivot.eulerAngles = new Vector3(0, 0, zRotation);
             Instantiate(enemyBeePrefab[rand], spawnPoint.position, transform.rotation, null);
+            //Debug.Log("Step 7");
 
-            
+
+
         }
 
 
@@ -87,9 +110,20 @@ public class EnemyBeeSpawner : MonoBehaviour
             //FindObjectOfType<PlayerShip>().HealthBoost(); // ----
 
             HUD.Instance.DisplayWave(currentWave);
-            
 
-            SpawnEnemyBee();
+            //Debug.Log("Step 1");
+
+            StartCoroutine(BeeSpawnBuffer()); // --
+
+            //Debug.Log("Step B");
+
+            //canSpawnEnemies = false; // --
+
+
+
+            //SpawnEnemyBee();
+
+
 
             if (currentWave > PlayerPrefs.GetInt("highestWave"))
             {
