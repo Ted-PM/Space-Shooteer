@@ -12,6 +12,8 @@ public class EnemyBeeSpawner : MonoBehaviour
     [HideInInspector] public int currentWave = 1;
     /*[HideInInspector] */public int startingNumberOfBees;
 
+    //public BeeBox beebox; //--
+
 
     public float spawnRate; // --
     //protected bool canSpawnEnemies; // --
@@ -31,7 +33,9 @@ public class EnemyBeeSpawner : MonoBehaviour
     {
         //canSpawnEnemies = true; // --
         SpawnEnemyBee();
-        
+
+        //beebox = GameObject.FindWithTag("BeeBox");
+        //beebox.canTakeDamage = false;
 
     }
 
@@ -46,11 +50,19 @@ public class EnemyBeeSpawner : MonoBehaviour
 
     IEnumerator BeeSpawnBuffer() // --
     {
+        //beebox.canTakeDamage = false;
+
+        FindObjectOfType<BeeBox>().DamageBool(); // --
+
         FindObjectOfType<BeeBox>().ShakeBeeBox(); // --
         //canSpawnEnemies = false; // disables projectiles
         yield return new WaitForSeconds(spawnRate); // waits before can fire again
         //canSpawnEnemies = true; // can fire again
         SpawnEnemyBee();
+        FindObjectOfType<BeeBox>().DamageBool(); // --
+
+
+        //beebox.canTakeDamage = true;
 
     }
 

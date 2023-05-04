@@ -10,6 +10,8 @@ public class BeeBox : MonoBehaviour
     public Rigidbody2D myRigidbody2D;
     public GameObject explosionPrefab;
 
+    private bool canTakeDamage;
+
     //public AudioClip beeBuzzing;
 
     public AudioSource beeBuzzing;
@@ -39,17 +41,33 @@ public class BeeBox : MonoBehaviour
         //AudioSource.PlayClipAtPoint(beeBuzzing, new Vector3(1, 1, 1));
     }
 
+    public void DamageBool()
+    {
+        if (canTakeDamage)
+            canTakeDamage = false;
+        else
+            canTakeDamage = true;
+    }
+
+
+
     public void TakeDamage(int damageToTake)
     {
+        Debug.Log(currentArmor);
 
-        currentArmor = currentArmor - damageToTake;
+        Debug.Log(canTakeDamage);
 
-        if (currentArmor <= 0)
+        if (canTakeDamage)
         {
-            Expload();
+            Debug.Log(currentArmor);
+
+            currentArmor = currentArmor - damageToTake;
+
+            if (currentArmor <= 0)
+            {
+                Expload();
+            }
         }
-
-
     }
 
     public void Expload()
@@ -68,8 +86,8 @@ public class BeeBox : MonoBehaviour
 
     private void Awake()
     {
-      
 
+        canTakeDamage = true;
         currentArmor = maxArmor;
 
         //beeBuzzing = gameObject.GetComponent<AudioSource>();
