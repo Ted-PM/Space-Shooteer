@@ -25,9 +25,11 @@ public class FlowerSpawner : MonoBehaviour
 
             Vector3 spawnPosition = new Vector3(X, Y, Z);
 
+            //Quaternion spawnRotation = new Quaternion(Random.Ran)
+
             int rand = Random.Range(0, flowerPrefabs.Count);
 
-            Instantiate(flowerPrefabs[rand], spawnPosition, transform.rotation, transform);
+            Instantiate(flowerPrefabs[rand], spawnPosition, Quaternion.Euler((float)0.0, (float)0.0, Random.Range((float)0.0, (float) 360.0)), transform);
         }
         
     }

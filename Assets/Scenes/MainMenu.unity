@@ -573,7 +573,7 @@ RectTransform:
   - {fileID: 430753825}
   - {fileID: 700709760}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -694,7 +694,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &676069213
 MonoBehaviour:
@@ -913,7 +913,7 @@ Transform:
   m_Children:
   - {fileID: 151993464}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &1721623219
 SpriteRenderer:
@@ -975,7 +975,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1721623217}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: b89c1fa127f02495bb0678edbc21fd20, type: 2}
   m_CullingMode: 0
@@ -987,6 +987,67 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!1001 &1825086107
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1156770094106574008, guid: 73779f8953b304163bcf2a0134110be2, type: 3}
+      propertyPath: m_Name
+      value: Possible Wasp Sprite Animation_0 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156770094106574008, guid: 73779f8953b304163bcf2a0134110be2, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156770094106574015, guid: 73779f8953b304163bcf2a0134110be2, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156770094106574015, guid: 73779f8953b304163bcf2a0134110be2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 5.5800767
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156770094106574015, guid: 73779f8953b304163bcf2a0134110be2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.525631
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156770094106574015, guid: 73779f8953b304163bcf2a0134110be2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156770094106574015, guid: 73779f8953b304163bcf2a0134110be2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156770094106574015, guid: 73779f8953b304163bcf2a0134110be2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156770094106574015, guid: 73779f8953b304163bcf2a0134110be2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156770094106574015, guid: 73779f8953b304163bcf2a0134110be2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156770094106574015, guid: 73779f8953b304163bcf2a0134110be2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156770094106574015, guid: 73779f8953b304163bcf2a0134110be2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1156770094106574015, guid: 73779f8953b304163bcf2a0134110be2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 73779f8953b304163bcf2a0134110be2, type: 3}
 --- !u!1 &2000949324
 GameObject:
   m_ObjectHideFlags: 0
@@ -1019,6 +1080,7 @@ MonoBehaviour:
   flowerPrefabs:
   - {fileID: 2797741746802809875, guid: 4fd7029afa8da4af7a224966a314b0d5, type: 3}
   - {fileID: 8252662673151358857, guid: 3aa7b2c450c204200bcc5df38283e8c9, type: 3}
+  - {fileID: 9166048357403463472, guid: 2ded9a3f7ec4543f4a0e0c5c20c9d072, type: 3}
   numberOfFlowers: 3000
   maxX: 1000
   maxY: 1000
@@ -1037,7 +1099,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1156770094880314066
 PrefabInstance:
