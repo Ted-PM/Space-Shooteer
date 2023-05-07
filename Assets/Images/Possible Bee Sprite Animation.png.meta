@@ -1,0 +1,575 @@
+fileFormatVersion: 2
+guid: 958ee94d7a374463e9ff4d06416fb690
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Possible Bee Sprite Animation_0
+      rect:
+        serializedVersion: 2
+        x: 35
+        y: 648
+        width: 246
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc2fc27b604514d609864c9ed12deb18
+      internalID: -1846258304
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Possible Bee Sprite Animation_1
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 648
+        width: 268
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f560eed570b23464198dfe71e75c330f
+      internalID: 194868015
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Possible Bee Sprite Animation_2
+      rect:
+        serializedVersion: 2
+        x: 638
+        y: 648
+        width: 274
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5cba7bb1a740e4185a88d4f60cb2d6a9
+      internalID: 422862866
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Possible Bee Sprite Animation_3
+      rect:
+        serializedVersion: 2
+        x: 950
+        y: 640
+        width: 264
+        height: 178
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 734c512f1c4724780ab27a25f34a1e3c
+      internalID: -2022257915
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Possible Bee Sprite Animation_4
+      rect:
+        serializedVersion: 2
+        x: 1298
+        y: 648
+        width: 192
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e4545cf9b130c43fbabbc0a89f8071bd
+      internalID: 566595139
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Possible Bee Sprite Animation_5
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 440
+        width: 239
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb5e70ac6d6894065a85d21b3523bc54
+      internalID: -1717387033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Possible Bee Sprite Animation_6
+      rect:
+        serializedVersion: 2
+        x: 329
+        y: 440
+        width: 274
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b5a605c1ed04349c087fa9ac9b8ebf30
+      internalID: -2144204208
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Possible Bee Sprite Animation_7
+      rect:
+        serializedVersion: 2
+        x: 635
+        y: 440
+        width: 275
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1bc9e4dbec9804caba32d506cf9fc122
+      internalID: 1496022512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Possible Bee Sprite Animation_8
+      rect:
+        serializedVersion: 2
+        x: 961
+        y: 440
+        width: 246
+        height: 173
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 577b742c8035d43999bb88f4fd080bb9
+      internalID: -1835134253
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Possible Bee Sprite Animation_9
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 439
+        width: 268
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 387687ca736dc4aee911266d38935ddf
+      internalID: 1143465077
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Possible Bee Sprite Animation_10
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 232
+        width: 274
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ec7b3f21ffdf4a63bae0c47f2a2cfb2
+      internalID: 1632222905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Possible Bee Sprite Animation_11
+      rect:
+        serializedVersion: 2
+        x: 332
+        y: 225
+        width: 264
+        height: 179
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 291b0dcf88af14f59a2d7abdc258751d
+      internalID: -1412737765
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Possible Bee Sprite Animation_12
+      rect:
+        serializedVersion: 2
+        x: 681
+        y: 232
+        width: 191
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1ebc4c70e36734ed7a9a9472d1f293ba
+      internalID: 332684109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Possible Bee Sprite Animation_13
+      rect:
+        serializedVersion: 2
+        x: 965
+        y: 232
+        width: 239
+        height: 170
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b99bfdf7edfa4de09d605b071a1e9d9
+      internalID: 91350738
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Possible Bee Sprite Animation_14
+      rect:
+        serializedVersion: 2
+        x: 1256
+        y: 232
+        width: 274
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a6466ab3c5b7140e7a67fef106e34e54
+      internalID: 1989966701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Possible Bee Sprite Animation_15
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 25
+        width: 275
+        height: 174
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 99f5093cb85f8440fa7df601b7c8d6d1
+      internalID: -1933424642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Possible Bee Sprite Animation_16
+      rect:
+        serializedVersion: 2
+        x: 342
+        y: 25
+        width: 247
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a91e4b7298f114ddd8cac12f31018518
+      internalID: -1726301319
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Possible Bee Sprite Animation_17
+      rect:
+        serializedVersion: 2
+        x: 641
+        y: 25
+        width: 268
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f0c8a39e8f234be592682921d9c20cf
+      internalID: -1930050618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Possible Bee Sprite Animation_18
+      rect:
+        serializedVersion: 2
+        x: 947
+        y: 25
+        width: 274
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c93bcc635d797409994597051bc63afd
+      internalID: 1563972989
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Possible Bee Sprite Animation_19
+      rect:
+        serializedVersion: 2
+        x: 1259
+        y: 18
+        width: 264
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0f5257737d7c64a98ad6c2395d5da50b
+      internalID: 809216290
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      Possible Bee Sprite Animation_19: 809216290
+      Possible Bee Sprite Animation_7: 1496022512
+      Possible Bee Sprite Animation_17: -1930050618
+      Possible Bee Sprite Animation_5: -1717387033
+      Possible Bee Sprite Animation_14: 1989966701
+      Possible Bee Sprite Animation_16: -1726301319
+      Possible Bee Sprite Animation_1: 194868015
+      Possible Bee Sprite Animation_10: 1632222905
+      Possible Bee Sprite Animation_12: 332684109
+      Possible Bee Sprite Animation_8: -1835134253
+      Possible Bee Sprite Animation_0: -1846258304
+      Possible Bee Sprite Animation_13: 91350738
+      Possible Bee Sprite Animation_6: -2144204208
+      Possible Bee Sprite Animation_4: 566595139
+      Possible Bee Sprite Animation_3: -2022257915
+      Possible Bee Sprite Animation_9: 1143465077
+      Possible Bee Sprite Animation_15: -1933424642
+      Possible Bee Sprite Animation_11: -1412737765
+      Possible Bee Sprite Animation_2: 422862866
+      Possible Bee Sprite Animation_18: 1563972989
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

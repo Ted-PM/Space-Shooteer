@@ -2,15 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerShip : Ship
+public class PlayerBird : Animals
 {
 
+    private Transform target;
 
     // int armorToGain = 5; // ----
 
     void Start()
     {
-
+        target = FindObjectOfType<BeeBox>().transform;
     }
 
     public void HandleInput()
@@ -27,6 +28,7 @@ public class PlayerShip : Ship
 
         
     }
+
 
     public void FollowMouse()
     {

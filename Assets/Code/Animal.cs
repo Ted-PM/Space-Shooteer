@@ -3,12 +3,18 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public class Ship : MonoBehaviour
+public class Animals : MonoBehaviour
 {
+    // IS THIS VISIBLE
+
     public Rigidbody2D myRigidbody2D;
     public GameObject projectilePrefab;
     public GameObject projectileSpawnPoint;
     public GameObject explosionPrefab;
+    //public GameObject pointerPrefab;
+
+    public GameObject trailPrefab; // --
+    public GameObject trailSpawnPoint; // --
 
     /*
     public GameObject thrustPrefab;
@@ -24,18 +30,30 @@ public class Ship : MonoBehaviour
     [HideInInspector] public int currentArmor;
     protected bool canFire;
 
+    protected bool canLeaveTrail; // --
+
     // public bool canGainHealth; // ----
 
-    [HideInInspector] ParticleSystem thrustParticles; // hidden in unity, 
+    //[HideInInspector] ParticleSystem pollenParticles; // hidden in unity,
+    //public ParticleSystem pollenPrefab;
+
+
 
     private void Awake()
     {
         currentArmor = maxArmor;
         canFire = true;
+        canLeaveTrail = true; // --
 
         // canGainHealth = true; // ----
 
-        thrustParticles = GetComponentInChildren<ParticleSystem>();
+        //Debug.Log("Step1");
+        //pollenParticles = GetComponentInChildren<ParticleSystem>();
+        //pollenParticles = Instantiate(pollenPrefab, myRigidbody2D.transform.position, myRigidbody2D.transform.rotation);
+        //pollenParticles.transform.parent = this.transform;
+
+
+
     }
 
     IEnumerator FireRateBuffer()
@@ -45,12 +63,41 @@ public class Ship : MonoBehaviour
         canFire = true; // can fire again
     }
 
+    IEnumerator TrailRateBuffer() // --
+    {
+        canLeaveTrail = false; // disables projectiles
+        yield return new WaitForSeconds(0.5f); // waits before can fire again
+        canLeaveTrail = true; // can fire again
+    }
+
+
+    public void LeaveTrail() // --
+    {
+        if (canLeaveTrail)
+        {
+            GameObject trail = Instantiate(trailPrefab, trailSpawnPoint.transform.position, transform.rotation); // creates game object, prefab
+
+            //projectile.GetComponent<Projectile>().SetFiringShip(gameObject); // getcomponent finds out, from game object <projectile>, the ship which created it
+
+            //projectile.GetComponent<Rigidbody2D>().AddForce(transform.up * projectileSpeed); //creates force on projectile
+
+            Destroy(trail, 2); // destroys after 4 seconds
+
+            StartCoroutine(TrailRateBuffer()); // waits for the delay before making new one
+        }
+
+    }
 
     public void Thrust()
     {
+
+
         myRigidbody2D.AddForce(transform.up * acceleration); // adds force to ship
 
-        thrustParticles.Emit(1);
+        LeaveTrail(); // --
+
+        //pollenParticles.Emit(1);
+
     }
 
     private void Update()
@@ -95,7 +142,7 @@ public class Ship : MonoBehaviour
     {
         //Debug.Log("Step1");
 
-        if (GetComponent<PlayerShip>())
+        if (GetComponent<PlayerBird>())
         {
             //Debug.Log("Step2");
             GameManager.Instance.GameOver();
@@ -107,10 +154,10 @@ public class Ship : MonoBehaviour
         ScreenShakeManager.Instance.ShakeScreen(); // calling class, find instance, instance only calls 1 this
         
 
-        Instantiate(Resources.Load("Explosion"), transform.position, transform.rotation);  //Instantiate(explosionPrefab, transform.position, transform.rotation);
+        Instantiate(Resources.Load("Bee Explosion"), transform.position, transform.rotation);  //Instantiate(explosionPrefab, transform.position, transform.rotation);
 
 
-        FindObjectOfType<EnemyShipSpawner>().CountEnemyShips();
+        FindObjectOfType<EnemyBeeSpawner>().CountEnemyBees();
 
         Destroy(gameObject);
 

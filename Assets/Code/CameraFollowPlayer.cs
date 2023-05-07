@@ -9,7 +9,7 @@ public class CameraFollowPlayer : MonoBehaviour
 
     void Start()
     {
-        player = FindObjectOfType<PlayerShip>().transform; // finds player ship location at start
+        player = FindObjectOfType<PlayerBird>().transform; // finds player ship location at start
     }
 
 

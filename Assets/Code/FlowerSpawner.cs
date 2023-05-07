@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class StarSpawner : MonoBehaviour
+public class FlowerSpawner : MonoBehaviour
 {
-    public GameObject starPrefab;
-    public int numberOfStars;
+    public List<GameObject> flowerPrefabs;
+
+    //public GameObject flowerPrefab;
+    public int numberOfFlowers;
     public int maxX;
     public int maxY;
     public int maxZ;
@@ -15,7 +17,7 @@ public class StarSpawner : MonoBehaviour
 
     void Start()
     {
-        for (int i = 0; i<numberOfStars; i++)
+        for (int i = 0; i<numberOfFlowers; i++)
         {
             float X = Random.Range(-maxX, maxX);
             float Y = Random.Range(-maxY, maxY);
@@ -23,7 +25,9 @@ public class StarSpawner : MonoBehaviour
 
             Vector3 spawnPosition = new Vector3(X, Y, Z);
 
-            Instantiate(starPrefab, spawnPosition, transform.rotation, transform);
+            int rand = Random.Range(0, flowerPrefabs.Count);
+
+            Instantiate(flowerPrefabs[rand], spawnPosition, transform.rotation, transform);
         }
         
     }
