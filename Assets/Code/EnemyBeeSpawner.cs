@@ -41,12 +41,7 @@ public class EnemyBeeSpawner : MonoBehaviour
 
 
 
-    /*public void SpawnEnemyShip()
-    {
-
-        Instantiate(enemyShip1, spawnPoint1.position, transform.rotation, null);
-        Instantiate(enemyShip2, spawnPoint2.position, transform.rotation, null);  
-    }*/
+   
 
     IEnumerator BeeSpawnBuffer() // --
     {

@@ -15,6 +15,9 @@ public class EnemyBee : Animals
 
     Color colorGreen = new Color(0.0f, 1.0f, 0.5f, 1.0f);
 
+    Color colorWhite = new Color(1.0f, 1.0f, 1.0f, 1.0f);
+
+
 
     void Start()
     {
@@ -30,7 +33,7 @@ public class EnemyBee : Animals
         {  
             collision.gameObject.GetComponent<PlayerBird>().TakeDamage(1);
             Expload();
-            target.GetComponent<SpriteRenderer>().color = colorGreen;
+            target.GetComponent<SpriteRenderer>().color = colorWhite;
         }
     }
 
@@ -66,7 +69,7 @@ public class EnemyBee : Animals
     {
 
         FlyToPlayer();
-        target.GetComponent<SpriteRenderer>().color = colorGreen;
+        target.GetComponent<SpriteRenderer>().color = colorWhite;
 
 
         if (canFireAtBirdPlayer)
