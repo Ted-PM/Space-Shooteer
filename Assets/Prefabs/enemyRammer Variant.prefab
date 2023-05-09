@@ -26,7 +26,7 @@ Transform:
   m_GameObject: {fileID: 6148909166500299294}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 8796625297639166502}
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: a46bba1827e224d88a8258cc7bafb105, type: 3}
-  m_Color: {r: 0.8551874, g: 0, b: 1, a: 1}
+  m_Color: {r: 1, g: 0.12189148, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -93,7 +93,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8104133191420936777, guid: 8dec6174077924c928e921c02f55bc07, type: 3}
       propertyPath: m_Name
-      value: enemyRammer
+      value: enemyRammer Variant
       objectReference: {fileID: 0}
     - target: {fileID: 8104133191420936788, guid: 8dec6174077924c928e921c02f55bc07, type: 3}
       propertyPath: m_RootOrder
