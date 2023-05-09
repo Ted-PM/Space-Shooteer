@@ -202,7 +202,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidbody2D: {fileID: 599619879066236708}
-  projectilePrefab: {fileID: 7865154081042551938, guid: 1d5ddfe541b044cafbc66e83816c6dfc, type: 3}
+  projectilePrefab: {fileID: 7865154081042551938, guid: 682f63aff660348f9a4d795e18c5cf30, type: 3}
   projectileSpawnPoint: {fileID: 599619878653953079}
   explosionPrefab: {fileID: 8103687451313379488, guid: 423ece554218541ddb30720c7a768c40, type: 3}
   trailPrefab: {fileID: 7865154081042551938, guid: 3c16216197f0a43f68d55560a0cd7a86, type: 3}
